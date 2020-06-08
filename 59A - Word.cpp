@@ -8,23 +8,27 @@ int main(){
 	freopen("output.txt","w",stdout);
 #endif
  
-	int a,n=0;
+	int n=0;
 	string s;
 	cin>>s;
 	for(int i=0;i<s.length();i++){
-		a=s[i];
-		if(65<=a&&a<=90){
+		if(isupper(s[i])){
 			n+=1;
 		}
 	}
+	char ch;
 	if(n>s.length()/2){
-		transform(s.begin(), s.end(), s.begin(), ::toupper); 
+		for(int i =0;i<s.length();i++){
+			ch=toupper(s[i]);
+			cout<<ch;
+		} 
 	}
 	else{
-		transform(s.begin(), s.end(), s.begin(), ::tolower);
+		for(int i =0;i<s.length();i++){
+			ch=tolower(s[i]);
+			cout<<ch;
+		}
 	}
- 
-	cout<<s;
  
 	return 0;
  
