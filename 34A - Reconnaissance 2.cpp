@@ -19,7 +19,7 @@ int main(){
 		a[i]=abs(a[i]-a[i+1]);	
 	}
 	int m=*min_element(a,a+n),j=0;
-	cout<<m<<endl;
+	
 	for(int i=0;i<n;i++){
 		if(m == a[i]){
 			j=i+1;
